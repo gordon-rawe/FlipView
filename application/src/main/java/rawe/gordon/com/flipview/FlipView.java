@@ -31,4 +31,14 @@ public class FlipView extends AbstractFlipView {
         oneSide.findViewById(R.id.image).setBackgroundColor(Color.GREEN);
         return oneSide;
     }
+
+    @Override
+    protected int getUpSidePadding() {
+        return 0;
+    }
+
+    @Override
+    protected int getDownSidePadding() {
+        return 0;
+    }
 }

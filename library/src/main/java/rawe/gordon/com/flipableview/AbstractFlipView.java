@@ -29,6 +29,8 @@ public abstract class AbstractFlipView extends LinearLayout implements View.OnCl
         setDirection(Direction.CLOCK_WISE);
         setOnClickListener(this);
         setCameraDistance();
+        upSideContainer.setPadding(getUpSidePadding(), getUpSidePadding(), getUpSidePadding(), getUpSidePadding());
+        downSideContainer.setPadding(getDownSidePadding(), getDownSidePadding(), getDownSidePadding(), getDownSidePadding());
     }
 
     public void setDirection(Direction direction) {
@@ -72,6 +74,10 @@ public abstract class AbstractFlipView extends LinearLayout implements View.OnCl
     protected abstract View getUpSideView();
 
     protected abstract View getDownSideView();
+
+    protected abstract int getUpSidePadding();
+
+    protected abstract int getDownSidePadding();
 
     // 翻转卡片
     public void flipCardClockWise() {
